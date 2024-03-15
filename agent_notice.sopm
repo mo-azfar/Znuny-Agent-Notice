@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+	<Name>Znuny-Agent-Notice</Name>
+	<Version>7.0.1</Version>
+	<Vendor>mo-azfar</Vendor>
+	<URL>https://github.com/mo-azfar</URL>
+	<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
+	<ChangeLog Version="7.0.1">New package.</ChangeLog>
+	<Description Lang="en">Display simple notice in agent portal.</Description>
+	<Framework>7.0.x</Framework>
+	<IntroInstall Lang="en" Title="Install Information" Type="pre"><![CDATA[
+        <br/>
+        <b>WELCOME</b>
+        <br/>
+        <br/>
+        You are about to install the package Znuny-Agent-Notice. Check <a href='https://github.com/mo-azfar/Znuny-Agent-Notice' target='_blank'/>README</a><br/>
+        <br/><br/>
+        ((enjoy))<br/>
+        <br/>
+    ]]></IntroInstall>
+    <IntroUpgrade Lang="en" Title="Upgrade Information" Type="pre"><![CDATA[
+        <br/>
+        Changelog<br/>
+        7.0.1 - New package.<br/>
+        <br/><br/>
+        ((enjoy))<br/>
+        <br/>
+    ]]></IntroUpgrade>
+	<Filelist>
+		<File Permission="660" Location="Kernel/Config/Files/XML/ZZZAgentNotice.xml"></File>
+		<File Permission="660" Location="Custom/Kernel/Output/HTML/Notification/AgentNotice.pm"></File>
+	</Filelist>
+</otrs_package>
