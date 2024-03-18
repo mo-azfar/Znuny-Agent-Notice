@@ -13,72 +13,64 @@ use parent 'Kernel::Output::HTML::Base';
 use strict;
 use warnings;
 
-use Kernel::Language qw(Translatable);
-use Kernel::System::DateTime;
-
 our @ObjectDependencies = (
-    'Kernel::Config',
     'Kernel::Output::HTML::Layout',
+    'Kernel::System::Group',
+    'Kernel::System::Log',
 );
 
 sub Run {
     my ( $Self, %Param ) = @_;
 
     my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
-	
-	#get paremeter
-	my %GetParam;
-    for my $Needed ( qw( Text Group) )
-	{
-       if ( !$Param{Config}->{$Needed} ) 
-	   {
-			$LogObject->Log(
-				Priority => 'error',
-				Message  => "AgentNotice: Need $Needed!"
-			);
-        	
-			return;
-	   }
-	}
 
-	my $Output = '';
+    # check paremeter
+    NEEDED:
+    for my $Needed (qw(Text Group)) {
+
+        next NEEDED if defined $Param{Config}->{$Needed};
+
+        $LogObject->Log(
+            Priority => 'error',
+            Message  => "AgentNotice: Need $Needed!"
+        );
+        return;
+    }
+
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
-	my $GroupObject = $Kernel::OM->Get('Kernel::System::Group');
-	
-	my $ShowAgentNotice = 0;
+    my $GroupObject  = $Kernel::OM->Get('Kernel::System::Group');
+
+    my $Output          = '';
+    my $ShowAgentNotice = 0;
+
+    # only show notice based on define frontend action
     NOTICE:
-	
-	#only show notice based on define frontend action
-	for (@{$Param{Config}->{Action}})
-	{
-        next if $LayoutObject->{Action} ne $_;
-		
-		if ( $LayoutObject->{Action} eq $_ ) {
-            $ShowAgentNotice = 1;
-            last NOTICE;
-        }
-	}
-	
-	#only show notice based on define group
-	my $HasPermission = $GroupObject->PermissionCheck(
+    for my $Action ( @{ $Param{Config}->{Action} } ) {
+        next NOTICE if $LayoutObject->{Action} ne $Action;
+
+        $ShowAgentNotice = 1;
+        last NOTICE;
+    }
+    return $Output if !$ShowAgentNotice;
+
+    # only show notice based on define group
+    my $HasPermission = $GroupObject->PermissionCheck(
         UserID    => $Self->{UserID},
         GroupName => $Param{Config}->{Group},
         Type      => 'rw',
-    );	
-	
-	if ( $ShowAgentNotice && $HasPermission )
-	{
-		$Output = $LayoutObject->Notify(
-			Priority => 'Notice',
-			Link     => "$Param{Config}->{URL}",
-			Data => $LayoutObject->{LanguageObject}->Translate(
-                   "$Param{Config}->{Text}"
-            ),
-		);
-	}
-	
-	return $Output;
-	
+    );
+    return $Output if !$HasPermission;
+
+    my $Text = $LayoutObject->{LanguageObject}->Translate("$Param{Config}->{Text}");
+
+    $Output = $LayoutObject->Notify(
+        Priority => 'Notice',
+        Link     => "$Param{Config}->{URL}",
+        Data     => $Text,
+    );
+
+    return $Output;
+
 }
 
 1;
