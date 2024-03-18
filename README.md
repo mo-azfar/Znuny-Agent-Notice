@@ -1,4 +1,5 @@
 # Znuny Agent Notice
+
 - Display simple notice in agent portal
 
 1. Go to Admin > System Configuration > Frontend::NotifyModule###880-AgentNotice
