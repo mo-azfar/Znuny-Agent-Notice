@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.1">
+    <Name>Znuny-Agent-Notice</Name>
+    <Version>7.0.2</Version>
+    <Vendor>mo-azfar</Vendor>
+    <URL>https://github.com/mo-azfar</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
+    <ChangeLog Date="2024-03-12 12:32:00 +0100" Version="7.0.1">New package.</ChangeLog>
+    <ChangeLog Date="2024-03-19 06:30:00 +0800" Version="7.0.2">Code tidied and apply code policy. Thanks @dennykorsukewitz.</ChangeLog>
+    <Description Lang="en">Display simple notice in agent portal.</Description>
+    <Framework>7.0.x</Framework>
+    <IntroInstall Lang="en" Title="Install Information" Type="pre">
+        &lt;br/&gt;
+        &lt;b&gt;WELCOME&lt;/b&gt;
+        &lt;br/&gt;
+        &lt;br/&gt;
+        You are about to install the package Znuny-Agent-Notice. Check &lt;a href='https://github.com/mo-azfar/Znuny-Agent-Notice' target='_blank'/&gt;README&lt;/a&gt;&lt;br/&gt;
+        &lt;br/&gt;&lt;br/&gt;
+        ((enjoy))&lt;br/&gt;
+        &lt;br/&gt;
+    </IntroInstall>
+    <IntroUpgrade Lang="en" Title="Upgrade Information" Type="pre">
+        &lt;br/&gt;
+        Changelog&lt;br/&gt;
+        7.0.1 - New package.&lt;br/&gt;
+		7.0.2 - Code tidied and apply code policy. Thanks @dennykorsukewitz.&lt;br/&gt;
+        &lt;br/&gt;&lt;br/&gt;
+        ((enjoy))&lt;br/&gt;
+        &lt;br/&gt;
+    </IntroUpgrade>
+    <BuildDate>2024-03-19 06:10:08</BuildDate>
+    <BuildHost>app.wsl.my</BuildHost>
+    <Filelist>
+        <File Location="Kernel/Config/Files/XML/ZZZAgentNotice.xml" Permission="660" Encode="Base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxvdHJzX2NvbmZpZyB2ZXJzaW9uPSIyLjAiIGluaXQ9IkNvbmZpZyI+DQogICA8U2V0dGluZyBOYW1lPSJGcm9udGVuZDo6Tm90aWZ5TW9kdWxlIyMjODgwLUFnZW50Tm90aWNlIiBSZXF1aXJlZD0iMCIgVmFsaWQ9IjEiPg0KICAgICAgICA8RGVzY3JpcHRpb24gVHJhbnNsYXRhYmxlPSIxIj5UaGlzIG1vZHVsZSBjaGVjayBhbnkgc3BlY2lmaWMgbm90aWNlIGZvciBhZ2VudC4gVGV4dCAobWFuZGF0b3J5KSBpcyB0ZXh0IHRvIHNob3cuIFVSTCAob3B0aW9uYWwpIGRlZmluZSBpZiB0ZXh0IGlzIGEgaHlwZXJsaW5rLiBHcm91cCAobWFuZGF0b3J5KSBkZWZpbmUgdG8gc2hvdyBub3RpY2UgdG8gd2hpY2ggYWdlbnQgZ3JvdXAgKHJ3KS48L0Rlc2NyaXB0aW9uPg0KICAgICAgICA8TmF2aWdhdGlvbj5Gcm9udGVuZDo6QWdlbnQ6OkZyb250ZW5kTm90aWZpY2F0aW9uPC9OYXZpZ2F0aW9uPg0KICAgICAgICA8VmFsdWU+DQogICAgICAgICAgICA8SGFzaD4NCiAgICAgICAgICAgICAgICA8SXRlbSBLZXk9Ik1vZHVsZSI+S2VybmVsOjpPdXRwdXQ6OkhUTUw6Ok5vdGlmaWNhdGlvbjo6QWdlbnROb3RpY2U8L0l0ZW0+DQogICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJBY3Rpb24iPg0KICAgICAgICAgICAgICAgICAgICA8QXJyYXk+DQogICAgICAgICAgICAgICAgICAgICAgICA8SXRlbT5BZ2VudERhc2hib2FyZDwvSXRlbT4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxJdGVtPkFnZW50VGlja2V0U3RhdHVzVmlldzwvSXRlbT4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxJdGVtPkFnZW50VGlja2V0UGhvbmU8L0l0ZW0+DQogICAgICAgICAgICAgICAgICAgICAgICA8SXRlbT5BZ2VudFRpY2tldEVtYWlsPC9JdGVtPg0KICAgICAgICAgICAgICAgICAgICA8L0FycmF5Pg0KICAgICAgICAgICAgICAgIDwvSXRlbT4NCiAgICAgICAgICAgICAgICA8SXRlbSBLZXk9IlRleHQiPkhlbGxvIHdvcmxkLiBNYWtlIHN1cmUgdG8gY2hlY2sgdG9kYXkgd2VhdGhlci48L0l0ZW0+DQogICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJVUkwiPmh0dHBzOi8vd3d3LmFjY3V3ZWF0aGVyLmNvbS88L0l0ZW0+DQogICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJHcm91cCI+dXNlcnM8L0l0ZW0+DQogICAgICAgICAgICA8L0hhc2g+DQogICAgICAgIDwvVmFsdWU+DQogICAgPC9TZXR0aW5nPg0KPC9vdHJzX2NvbmZpZz4=</File>
+        <File Location="Custom/Kernel/Output/HTML/Notification/AgentNotice.pm" Permission="660" Encode="Base64">IyAtLQ0KIyBDb3B5cmlnaHQgKEMpIDIwMjQgbW8tYXpmYXIsIGh0dHBzOi8vZ2l0aHViLmNvbS9tby1hemZhcg0KIyAtLQ0KIyBUaGlzIHNvZnR3YXJlIGNvbWVzIHdpdGggQUJTT0xVVEVMWSBOTyBXQVJSQU5UWS4gRm9yIGRldGFpbHMsIHNlZQ0KIyB0aGUgZW5jbG9zZWQgZmlsZSBDT1BZSU5HIGZvciBsaWNlbnNlIGluZm9ybWF0aW9uIChHUEwpLiBJZiB5b3UNCiMgZGlkIG5vdCByZWNlaXZlIHRoaXMgZmlsZSwgc2VlIGh0dHBzOi8vd3d3LmdudS5vcmcvbGljZW5zZXMvZ3BsLTMuMC50eHQuDQojIC0tDQoNCnBhY2thZ2UgS2VybmVsOjpPdXRwdXQ6OkhUTUw6Ok5vdGlmaWNhdGlvbjo6QWdlbnROb3RpY2U7DQoNCnVzZSBwYXJlbnQgJ0tlcm5lbDo6T3V0cHV0OjpIVE1MOjpCYXNlJzsNCg0KdXNlIHN0cmljdDsNCnVzZSB3YXJuaW5nczsNCg0Kb3VyIEBPYmplY3REZXBlbmRlbmNpZXMgPSAoDQogICAgJ0tlcm5lbDo6T3V0cHV0OjpIVE1MOjpMYXlvdXQnLA0KICAgICdLZXJuZWw6OlN5c3RlbTo6R3JvdXAnLA0KICAgICdLZXJuZWw6OlN5c3RlbTo6TG9nJywNCik7DQoNCnN1YiBSdW4gew0KICAgIG15ICggJFNlbGYsICVQYXJhbSApID0gQF87DQoNCiAgICBteSAkTG9nT2JqZWN0ID0gJEtlcm5lbDo6T00tPkdldCgnS2VybmVsOjpTeXN0ZW06OkxvZycpOw0KDQogICAgIyBjaGVjayBwYXJlbWV0ZXINCiAgICBORUVERUQ6DQogICAgZm9yIG15ICROZWVkZWQgKHF3KFRleHQgR3JvdXApKSB7DQoNCiAgICAgICAgbmV4dCBORUVERUQgaWYgZGVmaW5lZCAkUGFyYW17Q29uZmlnfS0+eyROZWVkZWR9Ow0KDQogICAgICAgICRMb2dPYmplY3QtPkxvZygNCiAgICAgICAgICAgIFByaW9yaXR5ID0+ICdlcnJvcicsDQogICAgICAgICAgICBNZXNzYWdlICA9PiAiQWdlbnROb3RpY2U6IE5lZWQgJE5lZWRlZCEiDQogICAgICAgICk7DQogICAgICAgIHJldHVybjsNCiAgICB9DQoNCiAgICBteSAkTGF5b3V0T2JqZWN0ID0gJEtlcm5lbDo6T00tPkdldCgnS2VybmVsOjpPdXRwdXQ6OkhUTUw6OkxheW91dCcpOw0KICAgIG15ICRHcm91cE9iamVjdCAgPSAkS2VybmVsOjpPTS0+R2V0KCdLZXJuZWw6OlN5c3RlbTo6R3JvdXAnKTsNCg0KICAgIG15ICRPdXRwdXQgICAgICAgICAgPSAnJzsNCiAgICBteSAkU2hvd0FnZW50Tm90aWNlID0gMDsNCg0KICAgICMgb25seSBzaG93IG5vdGljZSBiYXNlZCBvbiBkZWZpbmUgZnJvbnRlbmQgYWN0aW9uDQogICAgTk9USUNFOg0KICAgIGZvciBteSAkQWN0aW9uICggQHsgJFBhcmFte0NvbmZpZ30tPntBY3Rpb259IH0gKSB7DQogICAgICAgIG5leHQgTk9USUNFIGlmICRMYXlvdXRPYmplY3QtPntBY3Rpb259IG5lICRBY3Rpb247DQoNCiAgICAgICAgJFNob3dBZ2VudE5vdGljZSA9IDE7DQogICAgICAgIGxhc3QgTk9USUNFOw0KICAgIH0NCiAgICByZXR1cm4gJE91dHB1dCBpZiAhJFNob3dBZ2VudE5vdGljZTsNCg0KICAgICMgb25seSBzaG93IG5vdGljZSBiYXNlZCBvbiBkZWZpbmUgZ3JvdXANCiAgICBteSAkSGFzUGVybWlzc2lvbiA9ICRHcm91cE9iamVjdC0+UGVybWlzc2lvbkNoZWNrKA0KICAgICAgICBVc2VySUQgICAgPT4gJFNlbGYtPntVc2VySUR9LA0KICAgICAgICBHcm91cE5hbWUgPT4gJFBhcmFte0NvbmZpZ30tPntHcm91cH0sDQogICAgICAgIFR5cGUgICAgICA9PiAncncnLA0KICAgICk7DQogICAgcmV0dXJuICRPdXRwdXQgaWYgISRIYXNQZXJtaXNzaW9uOw0KDQogICAgbXkgJFRleHQgPSAkTGF5b3V0T2JqZWN0LT57TGFuZ3VhZ2VPYmplY3R9LT5UcmFuc2xhdGUoIiRQYXJhbXtDb25maWd9LT57VGV4dH0iKTsNCg0KICAgICRPdXRwdXQgPSAkTGF5b3V0T2JqZWN0LT5Ob3RpZnkoDQogICAgICAgIFByaW9yaXR5ID0+ICdOb3RpY2UnLA0KICAgICAgICBMaW5rICAgICA9PiAiJFBhcmFte0NvbmZpZ30tPntVUkx9IiwNCiAgICAgICAgRGF0YSAgICAgPT4gJFRleHQsDQogICAgKTsNCg0KICAgIHJldHVybiAkT3V0cHV0Ow0KDQp9DQoNCjE7DQo=</File>
+    </Filelist>
+</otrs_package>
