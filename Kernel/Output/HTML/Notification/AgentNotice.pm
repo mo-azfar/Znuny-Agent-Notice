@@ -26,7 +26,7 @@ sub Run {
 
     # check paremeter
     NEEDED:
-    for my $Needed (qw(Text Group)) {
+    for my $Needed (qw(Text Group Action)) {
 
         next NEEDED if defined $Param{Config}->{$Needed};
 
@@ -40,18 +40,13 @@ sub Run {
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
     my $GroupObject  = $Kernel::OM->Get('Kernel::System::Group');
 
-    my $Output          = '';
-    my $ShowAgentNotice = 0;
+    my $Output = '';
+    my $Action = $LayoutObject->{Action} || 0;
+
+    return $Output if !$Action;
 
     # only show notice based on define frontend action
-    NOTICE:
-    for my $Action ( @{ $Param{Config}->{Action} } ) {
-        next NOTICE if $LayoutObject->{Action} ne $Action;
-
-        $ShowAgentNotice = 1;
-        last NOTICE;
-    }
-    return $Output if !$ShowAgentNotice;
+    return $Output if !$Param{Config}->{Action}->{$Action};
 
     # only show notice based on define group
     my $HasPermission = $GroupObject->PermissionCheck(

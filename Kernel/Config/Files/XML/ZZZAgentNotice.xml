@@ -7,12 +7,10 @@
             <Hash>
                 <Item Key="Module">Kernel::Output::HTML::Notification::AgentNotice</Item>
                 <Item Key="Action">
-                    <Array>
-                        <Item>AgentDashboard</Item>
-                        <Item>AgentTicketStatusView</Item>
-                        <Item>AgentTicketPhone</Item>
-                        <Item>AgentTicketEmail</Item>
-                    </Array>
+                    <Hash>
+                        <Item Key="AgentDashboard">1</Item>
+                        <Item Key="AgentTicketStatusView">1</Item>
+                    </Hash>
                 </Item>
                 <Item Key="Text">Hello world. Make sure to check today weather.</Item>
                 <Item Key="URL">https://www.accuweather.com/</Item>
