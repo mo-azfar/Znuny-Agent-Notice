@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>Znuny-Agent-Notice</Name>
-    <Version>7.0.1</Version>
+    <Version>7.0.2</Version>
     <Framework>7.0.x</Framework>
     <Vendor>mo-azfar</Vendor>
     <URL>https://github.com/mo-azfar</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <Description Lang="en">Display simple notice in agent portal.</Description>
     <ChangeLog Version="7.0.1" Date="2024-03-12 12:32:00 +0100">New package.</ChangeLog>
+	<ChangeLog Version="7.0.2" Date="2024-03-19 06:30:00 +0800">Code tidied and apply code policy. Thanks @dennykorsukewitz.</ChangeLog>
     <Filelist>
         <File Permission="660" Location="Kernel/Config/Files/XML/ZZZAgentNotice.xml"/>
         <File Permission="660" Location="Custom/Kernel/Output/HTML/Notification/AgentNotice.pm"/>
@@ -26,6 +27,7 @@
         <br/>
         Changelog<br/>
         7.0.1 - New package.<br/>
+		7.0.2 - Code tidied and apply code policy. Thanks @dennykorsukewitz.<br/>
         <br/><br/>
         ((enjoy))<br/>
         <br/>
