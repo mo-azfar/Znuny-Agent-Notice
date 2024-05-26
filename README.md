@@ -4,10 +4,10 @@
 
 1. Go to Admin > System Configuration > Frontend::NotifyModule###880-AgentNotice
 
-    1 =>    Action - define which screen to show the agent notice.
-			Group - only show the notice to specific rw group.
-			Text -  text to display. Mandatory.
-			URL - to display the text as URL Hyperlink. Optional.
+		1 =>    Action - define which screen to show the agent notice.  
+			Group - only show the notice to specific rw group.  
+			Text -  text to display. Mandatory.  
+			URL - to display the text as URL Hyperlink. Optional.  
 	
 	Example,
 	
