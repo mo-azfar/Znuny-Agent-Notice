@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>Znuny-Agent-Notice</Name>
-    <Version>7.0.3</Version>
+    <Version>7.0.4</Version>
     <Framework>7.0.x</Framework>
     <Vendor>mo-azfar</Vendor>
-    <URL>https://github.com/mo-azfar</URL>
+    <URL>https://github.com/mo-azfar/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <Description Lang="en">Display simple notice in agent portal.</Description>
     <ChangeLog Version="7.0.1" Date="2024-03-12 12:32:00 +0100">New package.</ChangeLog>
     <ChangeLog Version="7.0.2" Date="2024-03-19 06:30:00 +0800">Code tidied and apply code policy. Thanks @dennykorsukewitz.</ChangeLog>
     <ChangeLog Version="7.0.3" Date="2024-03-27 15:15:00 +0800">Code tidied. Move back related file to default folder.</ChangeLog>
+    <ChangeLog Version="7.0.4" Date="2024-05-26 18:25:00 +0800">Update module to allow multiple notice per screen. Please reset system config 'Frontend::NotifyModule###880-AgentNotice' first.</ChangeLog>
     <Filelist>
         <File Permission="660" Location="Kernel/Config/Files/XML/ZZZAgentNotice.xml"/>
         <File Permission="660" Location="Kernel/Output/HTML/Notification/AgentNotice.pm"/>
     </Filelist>
+    <CodeUpgrade Type="post" Version="7.0.4"><![CDATA[
+my $ZnunyHelperObject = $Kernel::OM->Get('Kernel::System::ZnunyHelper');
+my $Success = $ZnunyHelperObject->_RebuildConfig();
+    ]]></CodeUpgrade>
     <IntroInstall Lang="en" Title="Install Information" Type="pre"><![CDATA[
         <br/>
         <b>WELCOME</b>
@@ -30,6 +35,7 @@
         7.0.1 - New package.<br/>
         7.0.2 - Code tidied and apply code policy. Thanks @dennykorsukewitz.<br/>
         7.0.3 - Code tidied. Move back related file to default folder.<br/>
+        7.0.4 - Update module to allow multiple notice per screen. Please reset system config 'Frontend::NotifyModule###880-AgentNotice' first.<br/>
         <br/><br/>
         ((enjoy))<br/>
         <br/>

@@ -5,16 +5,20 @@
         <Navigation>Frontend::Agent::FrontendNotification</Navigation>
         <Value>
             <Hash>
-                <Item Key="Module">Kernel::Output::HTML::Notification::AgentNotice</Item>
-                <Item Key="Action">
+                <DefaultItem>
                     <Hash>
-                        <Item Key="AgentDashboard">1</Item>
-                        <Item Key="AgentTicketStatusView">1</Item>
+                        <Item></Item>
+                    </Hash>
+                </DefaultItem>
+                <Item Key="Module">Kernel::Output::HTML::Notification::AgentNotice</Item>
+                <Item Key="1">
+                    <Hash>
+                        <Item Key="Action">AgentDashboard</Item>
+                        <Item Key="Text">Hello Admin. Make sure to check today weather from AgentDashboard.</Item>
+                        <Item Key="URL">https://www.accuweather.com/</Item>
+                        <Item Key="Group">admin</Item>
                     </Hash>
                 </Item>
-                <Item Key="Text">Hello world. Make sure to check today weather.</Item>
-                <Item Key="URL">https://www.accuweather.com/</Item>
-                <Item Key="Group">users</Item>
             </Hash>
         </Value>
     </Setting>
